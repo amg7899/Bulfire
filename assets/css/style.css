@@ -1,0 +1,945 @@
+/* BULFIRE — site styles
+   A sister of ecoes.eu (same type, header, menu and card shapes) in BULFIRE's own colours: a clear
+   sky over forested hills with a faint warm glow at the horizon, charcoal ink, and the fire red of
+   the logo for the buttons, the drawn lines and the marks. The logo's flame, drawn large in fine
+   contour lines, stands behind the headline on Home. Every text box wraps, so the layout holds
+   when the page is translated. Notes in CLAUDE.md. */
+
+:root {
+  color-scheme: light;
+
+  /* palette */
+  --smoke: #f3f5f6;         /* page ground: cool, aluminium-white */
+  --paper: #ffffff;         /* cards, header, panels */
+  --sky: #e2eaf0;           /* top of the light (hero, page heads, menu) */
+  --glow: #f7e7d3;          /* the warm horizon at the bottom of the light, footer */
+  --ink: #1c2329;           /* headings, strong text: chassis charcoal */
+  --text: #3b434a;          /* body text */
+  --muted: #5c656d;         /* secondary text */
+  --line: #e0e5e8;          /* hairlines, card edges */
+  --line-strong: #c8d0d6;   /* frames of the header controls */
+  --field-edge: #8a949c;    /* form fields (3:1 on white) */
+  --fire: #d3141b;          /* buttons, drawn lines, nodes, markers (the logo's red, a touch deeper) */
+  --fire-deep: #b3131a;     /* links, focus ring, current page; button hover */
+  --fire-soft: #fdeceb;     /* the closing call to action */
+  --error: #b42318;
+  --lift: 0 22px 44px -26px rgba(28, 35, 41, .34);
+
+  /* type: as on ecoes.eu */
+  --font-display: "Jost", "Futura", "Century Gothic", Arial, sans-serif;
+  --font-text: "Geologica", "Segoe UI", Arial, sans-serif;
+
+  /* layout */
+  --container: 1320px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --header-h: 86px;
+  --radius: 18px;
+
+  /* layers */
+  --z-header: 50;
+  --z-skip: 100;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+}
+html.nav-lock { overflow: hidden; }
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--smoke);
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+a, button { touch-action: manipulation; }
+strong { font-weight: 600; color: var(--ink); }
+em { font-style: oblique 10deg; }
+::selection { background: #f9c9c6; color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--fire-deep);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  z-index: var(--z-skip);
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 600;
+}
+.skip-link:focus { left: 12px; }
+
+/* ---------- Cards: one soft shape for every panel ---------- */
+
+.plate,
+.sub-nav {
+  --edge: var(--line);
+  --fill: var(--paper);
+  border: 1px solid var(--edge);
+  border-radius: var(--radius);
+  background: var(--fill);
+}
+
+/* ---------- Header and navigation ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  border-bottom: 1px solid var(--line);
+}
+/* the blur sits on a pseudo-element so the full-screen menu is not trapped inside the header */
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(255, 255, 255, .88);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+          backdrop-filter: saturate(140%) blur(14px);
+}
+
+.header-inner {
+  min-height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* the BULFIRE logo (home), a hairline, then the ECOES JV logo (ecoes.eu), as on the old site's header */
+.brands {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 18px;
+  margin-right: auto;
+}
+.brand { display: inline-flex; flex-shrink: 0; }
+.brand img { height: 46px; width: auto; }
+.brand-jv {
+  display: inline-flex;
+  flex-shrink: 0;
+  padding-left: 18px;
+  border-left: 1px solid var(--line-strong);
+}
+.brand-jv img { height: 44px; width: auto; }
+@media (max-width: 599px) {
+  .brand-jv { display: none; }   /* on phones it stays in the footer */
+}
+
+.main-nav { flex: 1 1 auto; min-width: 0; }
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: calc(20px * var(--nav-scale, 1));
+}
+/* centred between the logos and the right-hand group, then moved by main.js (--nav-shift) to the
+   middle of the window, as far as the free space allows (the two sides differ in width) */
+.main-nav > ul { transform: translateX(var(--nav-shift, 0px)); }
+.nav-open .main-nav > ul { transform: none; }
+.main-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  font-size: calc(14.5px * var(--nav-scale, 1));
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color .2s ease-out;
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--fire);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .2s ease-out;
+}
+.main-nav a:hover { color: var(--ink); }
+.main-nav a:hover::after { transform: scaleX(1); }
+.main-nav a[aria-current="page"] { color: var(--ink); }
+.main-nav a[aria-current="page"]::after { transform: scaleX(1); background: var(--fire-deep); }
+
+/* "Fire fighting vehicles" and its three pages: with a mouse the panel slides down on hover, the
+   arrow button opens it for touch and keyboard. A red line drops from the link to the panel, which
+   main.js shifts left (--sub-shift) if it would leave the window. */
+.main-nav .has-sub { position: relative; display: flex; align-items: center; }
+.sub-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max(24px, calc(26px * var(--nav-scale, 1)));
+  height: 40px;
+  padding: 0;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .2s ease-out;
+}
+.sub-toggle svg { width: 12px; height: 12px; transition: transform .2s ease-out; }
+.sub-toggle:hover,
+.sub-toggle[aria-expanded="true"] { color: var(--fire-deep); }
+.sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+.sub-panel {
+  --wire: 26px;
+  position: absolute;
+  top: 100%;
+  left: var(--sub-shift, 0px);
+  z-index: 3;
+  width: max-content;
+  max-width: min(580px, calc(100vw - 32px));
+  padding-top: var(--wire);          /* part of the panel, so the hover holds on the way down */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity .18s ease-out, transform .18s ease-out, visibility 0s linear .18s;
+}
+.sub-panel::before {                 /* the line, from the link's underline to the panel */
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: calc(14px - var(--sub-shift, 0px));
+  width: 2px;
+  height: calc(var(--wire) + 5px);
+  background: var(--fire);
+}
+.main-nav .has-sub.is-open > a::after { transform: scaleX(1); }
+.has-sub.is-open > .sub-panel {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition: opacity .18s ease-out, transform .18s ease-out, visibility 0s;
+}
+@media (hover: hover) {
+  .has-sub:hover > .sub-panel {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: opacity .18s ease-out, transform .18s ease-out, visibility 0s;
+  }
+  .has-sub.is-dismissed:hover > .sub-panel {      /* closed with Escape until the mouse leaves */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .has-sub:hover > .sub-toggle { color: var(--fire-deep); }
+  .has-sub:hover > .sub-toggle svg { transform: rotate(180deg); }
+  .main-nav .has-sub:hover > a::after { transform: scaleX(1); }
+}
+.main-nav .sub-nav {                 /* a column, not the row of the links above */
+  --radius: 14px;
+  display: block;
+  margin: 0;
+  padding: 6px 0;
+  box-shadow: 0 18px 40px -16px rgba(28, 35, 41, .24);
+}
+.sub-nav li + li { margin: 0 16px; border-top: 1px solid var(--line); }
+.sub-nav li + li a { margin: 0 -16px; }
+.main-nav .sub-nav a {
+  gap: 12px;
+  min-height: 48px;
+  padding: 10px 24px 10px 18px;
+  font-size: 15px;
+  line-height: 1.35;
+  white-space: normal;
+}
+.main-nav .sub-nav a::after { content: none; }
+.main-nav .sub-nav a::before {       /* the diamond of the lists on the document pages */
+  content: "";
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--fire);
+  transform: rotate(45deg);
+  transition: background-color .2s ease-out;
+}
+.main-nav .sub-nav a:hover::before { background: var(--fire); }
+.main-nav .sub-nav a[aria-current="page"]::before { background: var(--fire-deep); border-color: var(--fire-deep); }
+.main-nav .sub-nav a:focus-visible { outline-offset: -4px; }
+/* on the three vehicle pages the parent link carries the current-page mark */
+.main-nav .has-sub.is-current > a { color: var(--ink); }
+.main-nav .has-sub.is-current > a::after { transform: scaleX(1); background: var(--fire-deep); }
+
+/* the header row may use more width than the page content */
+.site-header .container { max-width: calc(1700px + 2 * var(--gutter)); }
+
+/* our own Bulgarian wording (links, buttons), shown when the page is translated to Bulgarian (the browser sets lang="bg") */
+.l10n-bg { display: none; }
+html[lang|="bg"] .l10n-src { display: none; }
+html[lang|="bg"] .l10n-bg { display: inline; }
+
+/* small white frames in the header: the menu button (left), the e-mail box and the language switch (right) */
+.nav-toggle,
+.header-mail,
+.lang-switch {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: var(--paper);
+  transition: border-color .2s ease-out;
+}
+
+/* the e-mail address, left of the language button. It gives way first when the row of links
+   needs the room (main.js adds .mail-off), and on phones. */
+.header-mail {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 46px;
+  margin-right: -8px;               /* one group with the language button */
+  padding: 0 12px 0 11px;
+  font-style: normal;
+}
+.header-mail-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--fire); }
+.header-mail a {
+  display: block;
+  padding: 0 4px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color .2s ease-out;
+}
+.header-mail a:hover { color: var(--fire-deep); }
+.header-mail a:focus-visible { outline-offset: -1px; }
+.mail-off .header-mail { display: none; }
+@media (max-width: 479px) {
+  .header-mail { display: none; }
+}
+
+/* the menu button: always there, left of the logo, opens every section full-screen */
+.nav-toggle {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+  transition: color .2s ease-out, border-color .2s ease-out;
+}
+.nav-toggle:hover { color: var(--fire-deep); border-color: var(--fire-deep); }
+.nav-toggle span,
+.nav-toggle span::before,
+.nav-toggle span::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  position: relative;
+  transition: transform .2s ease-out, background-color .2s ease-out;
+}
+.nav-toggle span::before,
+.nav-toggle span::after { content: ""; position: absolute; left: 0; }
+.nav-toggle span::before { top: -6px; }
+.nav-toggle span::after { top: 6px; }
+.nav-open .nav-toggle span { background: transparent; }
+.nav-open .nav-toggle span::before { transform: translateY(6px) rotate(45deg); }
+.nav-open .nav-toggle span::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* language switch, right end of the header: shows the other language (BG on English pages, EN on
+   Bulgarian ones) in a frame the size of the menu button. The link to the current language stays
+   in the markup for main.js but is not shown. */
+.lang-switch { display: flex; }
+.lang-switch:hover { border-color: var(--fire-deep); }
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 8px;
+  border-radius: 11px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s ease-out;
+}
+.lang-switch a:hover { color: var(--fire-deep); }
+.lang-switch a[aria-current] { display: none; }
+
+/* main.js scales the row of links down so it stays on one line in any language; below 1024px only the menu button remains */
+.nav-inline-off .main-nav { display: none; }
+
+/* full-screen menu */
+.nav-open .main-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  overflow-y: auto;
+  padding: calc(var(--header-h) + 32px) var(--gutter) 48px;
+  background:
+    url("../img/deco/forest.svg") right bottom / auto clamp(150px, 28vw, 380px) no-repeat,
+    linear-gradient(180deg, var(--sky) 0%, var(--smoke) 48%, #f5eadc 100%);
+  visibility: visible;
+  animation: menu-in .22s ease-out;
+}
+@keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } }
+.nav-open .main-nav ul {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto auto;
+}
+.nav-open .main-nav li { border-bottom: 1px solid rgba(28, 35, 41, .12); }
+.nav-open .main-nav a {
+  min-height: 64px;
+  padding: 10px 0;
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3.2vw, 32px);
+  font-weight: 500;
+  color: var(--ink);
+  white-space: normal;
+}
+.nav-open .main-nav a::after { bottom: 0; right: auto; width: 56px; }
+/* in the full-screen menu the three vehicle pages sit under "Fire fighting vehicles", on a red rail */
+.nav-open .main-nav .has-sub { display: block; }
+.nav-open .sub-toggle { display: none; }
+.nav-open .sub-panel {
+  position: static;
+  width: auto;
+  max-width: none;
+  padding: 0 0 16px;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.nav-open .sub-panel::before { content: none; }
+.nav-open .main-nav .sub-nav {
+  width: auto;
+  margin: 0 0 0 4px;
+  padding: 0 0 0 22px;
+  border: 0;
+  border-left: 2px solid var(--fire);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+.nav-open .main-nav .sub-nav li { margin: 0; border: 0; }
+.nav-open .main-nav .sub-nav a {
+  margin: 0;
+  min-height: 52px;
+  padding: 8px 0;
+  font-size: clamp(17px, 2.4vw, 24px);
+}
+
+/* ---------- The light of the hero and the page heads ----------
+   A clear sky at the top, a bright haze, a faint warm glow at the horizon; forested hills in
+   translucent white along the bottom (assets/img/deco, drawn by tools/forest.py). White only, so
+   the hills lighten the light behind the text and never darken it. */
+
+.hero,
+.page-head {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.hero::after,
+.page-head::after,
+.site-footer::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url("../img/deco/forest.svg") right bottom / auto 100% no-repeat;
+  pointer-events: none;
+}
+@media (forced-colors: active) {
+  .hero::after,
+  .page-head::after,
+  .site-footer::before,
+  .hero-flame { display: none; }
+  .nav-open .main-nav { background-image: none; }
+}
+
+/* ---------- Home: hero ---------- */
+
+.hero {
+  isolation: isolate;   /* layers, back to front: forest, then the flame and the text */
+  background:
+    radial-gradient(1000px 620px at 50% 0%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 64%),
+    linear-gradient(180deg, var(--sky) 0%, #eef2f4 44%, #f4ede3 78%, var(--glow) 100%);
+}
+/* The logo's flame, drawn in fine contour lines: its layered tongues from the red outside to the
+   amber core, as in the logo. It stands centred above the company name and the headline, as the
+   flame rises out of the U in the logo. The contours draw in once on load, core first, like a
+   flame catching: the page's only motion that nobody started. */
+.hero-flame {
+  display: block;
+  height: clamp(118px, 25vh, 270px);
+  width: auto;
+  margin-bottom: clamp(18px, 3vh, 32px);
+  overflow: visible;
+}
+.hero-flame path {
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: flame-in 1.5s cubic-bezier(.55, 0, .3, 1) forwards;
+}
+.hero-flame path:nth-child(1) { stroke: var(--fire); animation-delay: .75s; }
+.hero-flame path:nth-child(2) { stroke: #e33a1c; animation-delay: .6s; }
+.hero-flame path:nth-child(3) { stroke: #eb611e; animation-delay: .45s; }
+.hero-flame path:nth-child(4) { stroke: #f08a22; animation-delay: .3s; }
+.hero-flame path:nth-child(5) { stroke: #f4ac2a; animation-delay: .15s; }
+@keyframes flame-in { to { stroke-dashoffset: 0; } }
+/* forest on the hills at each side of the centred headline, a clearing under the words; the drawing
+   takes the width of the hero (at least 560px, centred) */
+.hero::after {
+  z-index: -1;
+  top: 0;
+  background: url("../img/deco/forest-hero.svg") center bottom / max(100%, 560px) auto no-repeat;
+}
+/* everything stands centred: the flame, the company name, the headline, a short red line below */
+.hero-inner {
+  position: relative;
+  min-height: clamp(460px, 72vh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: clamp(40px, 7vh, 96px);
+  padding-bottom: clamp(72px, 12vh, 136px);   /* room for the forest under the words */
+}
+/* never wider than the page: a very long translated word breaks instead of being cut off */
+.hero h1 { max-width: 100%; margin: 0; font-weight: inherit; }
+.hero-name {
+  display: block;
+  font-size: clamp(14px, 1.6vw, 19px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: .04em;
+  color: var(--text);
+}
+.hero-title {
+  display: block;
+  margin-top: .2em;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 11vw, 124px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.025em;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+.hero-line { display: block; }
+.hero-inner::after {     /* a short red line under the headline, as under every page title */
+  content: "";
+  width: 72px;
+  height: 3px;
+  margin-top: clamp(24px, 3vw, 36px);
+  border-radius: 3px;
+  background: var(--fire);
+}
+
+/* ---------- Home: the six vehicle tiles ---------- */
+
+.tiles-section {
+  padding: clamp(48px, 7vw, 96px) 0 0;
+  scroll-margin-top: var(--header-h);
+}
+/* one under the other on phones, two side by side on tablets and small laptops, three from 1240px */
+.tiles {
+  --tiles-gap: clamp(18px, 2.4vw, 28px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--tiles-gap);
+}
+@media (min-width: 760px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1240px) {
+  .tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.tiles > li { display: flex; }
+
+.tile {
+  --radius: 22px;
+  flex: 1;
+  min-width: 0;          /* a long translated word wraps instead of widening the card */
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+a.tile { transition: transform .3s cubic-bezier(.2, .7, .2, 1), box-shadow .3s ease-out, border-color .2s ease-out; }
+.tile-media {
+  margin: 10px 10px 0;
+  padding: 14px 10px 10px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.tile-media img {
+  width: 100%;
+  height: auto;
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+.tile-foot {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px 24px;
+  border-top: 1px solid var(--line);
+}
+.tile-foot h2 {
+  min-width: 0;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(18px, 1.6vw, 21px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.tile-go {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--paper);
+  background: var(--fire);
+  transition: background-color .2s ease-out;
+}
+.tile-go svg { width: 20px; height: 20px; transition: transform .2s ease-out; }
+a.tile:hover, a.tile:focus-visible { --edge: var(--line-strong); box-shadow: var(--lift); transform: translateY(-3px); }
+a.tile:hover .tile-media img { transform: scale(1.03); }
+a.tile:hover .tile-go, a.tile:focus-visible .tile-go { background: var(--ink); }
+a.tile:hover .tile-go svg { transform: translateX(3px); }
+
+/* ---------- Home: partners ---------- */
+
+.partners-section { padding: clamp(56px, 8vw, 104px) 0 clamp(64px, 9vw, 120px); }
+.section-title {
+  margin: 0 0 clamp(20px, 2.4vw, 28px);
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 32px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.section-title::after {   /* the short red line, as under the headline */
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 3px;
+  background: var(--fire);
+}
+.partners {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 24px);
+}
+@media (min-width: 900px) {
+  .partners { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.partners > li { display: flex; }
+.partner {
+  --radius: 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: clamp(8px, 1.6vw, 18px);
+  transition: border-color .2s ease-out, box-shadow .3s ease-out;
+}
+.partner img { width: 100%; max-width: 240px; height: auto; }
+.partner:hover, .partner:focus-visible { --edge: var(--line-strong); box-shadow: var(--lift); }
+
+/* ---------- Inner pages ---------- */
+
+.page-head {
+  background:
+    radial-gradient(900px 480px at 85% 0%, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0) 65%),
+    linear-gradient(180deg, var(--sky) 0%, #eef2f4 58%, #f4ebe0 100%);
+}
+.page-head .container {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(48px, 8vw, 104px);
+  padding-bottom: clamp(36px, 5vw, 64px);
+}
+/* the forest beside the title, fading out towards the text on the left; never taller than the
+   head. Below 1024px the text takes the full width, so the forest gets a band of its own. */
+.page-head::after {
+  height: min(26vw, 400px, 100% - 28px);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .35) 40%, #000 70%);
+          mask-image: linear-gradient(90deg, transparent 0, rgba(0, 0, 0, .35) 40%, #000 70%);
+}
+@media (max-width: 1023px) {
+  .page-head { --land-h: clamp(110px, 18vw, 180px); }
+  .page-head .container { padding-bottom: calc(var(--land-h) + 12px); }
+  .page-head::after {
+    height: var(--land-h);
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+}
+.page-head h1 {
+  margin: 0;
+  max-width: 22ch;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 6vw, 76px);
+  font-weight: 600;
+  letter-spacing: -.015em;
+  line-height: 1.02;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.page-head h1::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin-top: .45em;
+  border-radius: 3px;
+  background: var(--fire);
+}
+
+.page-body { padding: clamp(40px, 6vw, 80px) 0 clamp(64px, 9vw, 120px); }
+.page-body :where(section + section) { margin-top: clamp(48px, 6vw, 88px); }
+.page-body :where(h2) {
+  margin: 0 0 16px;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.page-body :where(p) { margin: 0 0 1em; max-width: 68ch; }
+.page-body :where(p:last-child) { margin-bottom: 0; }
+
+.text-link {
+  color: var(--fire-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--fire);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color .2s ease-out;
+}
+.text-link:hover { color: var(--ink); }
+
+/* ---------- Calls to action ---------- */
+
+/* red pill with the arrow in a white round chip */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 8px 9px 8px 24px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  color: #fff;
+  background: var(--fire);
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color .2s ease-out;
+}
+.btn svg {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--fire);
+  background: #fff;
+  transition: transform .2s ease-out, color .2s ease-out;
+}
+.btn:hover { background: var(--fire-deep); }
+.btn:hover svg { color: var(--fire-deep); transform: translateX(2px); }
+.btn[disabled] { opacity: .6; cursor: progress; }
+
+/* ---------- Footer: the company, its contacts and the links, on the warm light ---------- */
+
+.site-footer {
+  --land-h: clamp(110px, 12vw, 170px);
+  position: relative;
+  isolation: isolate;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, #f2f4f5 0%, #f4eee6 60%, var(--glow) 100%);
+  padding: clamp(44px, 6vw, 72px) 0 calc(var(--land-h) + 16px);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+/* the forest in a band of its own under the last line, mirrored */
+.site-footer::before {
+  z-index: -1;
+  height: var(--land-h);
+  transform: scaleX(-1);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 55%);
+          mask-image: linear-gradient(90deg, transparent, #000 55%);
+}
+.footer-about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(28, 35, 41, .12);
+}
+@media (min-width: 900px) {
+  .footer-about { grid-template-columns: auto minmax(0, 66ch); justify-content: start; align-items: start; }
+}
+.footer-about img { height: 52px; width: auto; }
+.footer-about a { display: inline-flex; }
+.footer-about p { margin: 0; color: var(--text); }
+.footer-about p + p { margin-top: 8px; }
+.footer-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 28px 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(28, 35, 41, .12);
+}
+.footer-col { font-style: normal; }   /* <address> is italic by default */
+.footer-col h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.footer-col p { margin: 0; }
+.footer-col p + p { margin-top: 10px; }
+.footer-col ul { list-style: none; margin: 0; padding: 0; }
+.footer-col li + li { margin-top: 2px; }
+.footer-label { display: block; color: var(--ink); font-weight: 500; }
+.footer-col a { color: var(--text); text-decoration-color: rgba(28, 35, 41, .3); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.footer-col a:hover { color: var(--fire-deep); text-decoration-color: currentColor; }
+.footer-col .btn { margin-top: 18px; font-size: 15.5px; min-height: 46px; padding: 6px 7px 6px 20px; }
+.footer-col .btn svg { width: 32px; height: 32px; padding: 7px; }
+.footer-col .btn,
+.footer-col .btn:hover { color: #fff; text-decoration: none; }   /* not the footer link colours */
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 48px;
+  padding-top: 22px;
+}
+.footer-jv { display: inline-flex; }   /* ECOES JV, of which BULFIRE ECOES Ltd. is a member: to ecoes.eu */
+.footer-jv img { height: 48px; width: auto; }
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 24px;
+}
+.footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14.5px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .2s ease-out;
+}
+.footer-nav a:hover { color: var(--ink); }
+.footer-copy { margin: 0; font-size: 14px; color: var(--muted); }
+
+@media (max-width: 480px) {
+  .brand img { height: 38px; }
+  .tile-go { width: 44px; height: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .hero-flame path { stroke-dashoffset: 0; }
+}
