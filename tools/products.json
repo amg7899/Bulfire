@@ -1,0 +1,1184 @@
+[
+ {
+  "id": 465,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 1 kg, EN 3",
+  "bg": "Прахов пожарогасител ABC 1 кг, EN 3",
+  "image": "group-88",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 467,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 2 kg, EN 3",
+  "bg": "Прахов пожарогасител ABC 2 кг, EN 3",
+  "image": "group-89",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 469,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 6 kg, EN 3",
+  "bg": "Прахов пожарогасител ABC 6 кг, EN 3",
+  "image": "group-90",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 471,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 12 kg, EN 3",
+  "bg": "Прахов пожарогасител ABC 12 кг, EN 3",
+  "image": "group-91",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 473,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 25 kg per trolley",
+  "bg": "Прахов пожарогасител ABC 25 кг на количка",
+  "image": "group-92",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 475,
+  "section": "companies",
+  "en": "Powder fire extinguisher ABC 50 kg per trolley",
+  "bg": "Прахов пожарогасител ABC 50 кг на количка",
+  "image": "group-92",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 476,
+  "section": "companies",
+  "en": "CO2 fire extinguisher 2 kg",
+  "bg": "Пожарогасител CO2 2 кг",
+  "image": "group-23",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 478,
+  "section": "companies",
+  "en": "CO2 fire extinguisher 5 kg",
+  "bg": "Пожарогасител CO2 5 кг",
+  "image": "group-25",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 480,
+  "section": "companies",
+  "en": "CO2 fire extinguisher 30 kg per trolley",
+  "bg": "Пожарогасител CO2 30 кг на количка",
+  "image": "group-26",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 482,
+  "section": "companies",
+  "en": "Foam fire extinguisher 6 L",
+  "bg": "Пенен пожарогасител 6 л",
+  "image": "group-70",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 484,
+  "section": "companies",
+  "en": "Water fire extinguisher 6 L",
+  "bg": "Воден пожарогасител 6 л",
+  "image": "group-70",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 485,
+  "section": "companies",
+  "en": "Fire blanket Light type 1500x1500 mm",
+  "bg": "Противопожарно одеяло, лек тип, 1500x1500 мм",
+  "image": "group-45",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 487,
+  "section": "companies",
+  "en": "Fire blanket Heavy type 1500x1500 mm",
+  "bg": "Противопожарно одеяло, тежък тип, 1500x1500 мм",
+  "image": "group-35",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 489,
+  "section": "companies",
+  "en": "Fire cabinet without equipment - mounted on the wall 530x400x180 mm – EN 671-2",
+  "bg": "Пожарен шкаф без оборудване – за монтаж на стена, 530x400x180 мм, EN 671-2",
+  "image": "group-148",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 491,
+  "section": "companies",
+  "en": "Fire cabinet without equipment - mounted in recess 530x400x180 mm EN 671-2",
+  "bg": "Пожарен шкаф без оборудване – за вграждане в ниша, 530x400x180 мм, EN 671-2",
+  "image": "group-146",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 493,
+  "section": "companies",
+  "en": "Fire cabinet mounted on the wall with equipment hose 52mm, 20 m, nozzle and faucet 530x400x180, EN 671-2",
+  "bg": "Пожарен шкаф за монтаж на стена, с оборудване: маркуч 52 мм, 20 м, струйник и кран, 530x400x180, EN 671-2",
+  "image": "group-147",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 495,
+  "section": "companies",
+  "en": "Fire cabinet mounted in recess with equipment hose 52mm, 20 m, nozzle and faucet 530x400x180, EN 671-2",
+  "bg": "Пожарен шкаф за вграждане в ниша, с оборудване: маркуч 52 мм, 20 м, струйник и кран, 530x400x180, EN 671-2",
+  "image": "group-149",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 497,
+  "section": "companies",
+  "en": "Hydrant hose 25 mm 20m with Storz couplings Working pressure 15 bar EN 14540",
+  "bg": "Хидрантен маркуч 25 мм, 20 м, със съединители Storz, работно налягане 15 bar, EN 14540",
+  "image": "group-83",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 499,
+  "section": "companies",
+  "en": "Hydrant hose 52 mm 20m with Storz couplings Working pressure 15 bar EN 14540",
+  "bg": "Хидрантен маркуч 52 мм, 20 м, със съединители Storz, работно налягане 15 bar, EN 14540",
+  "image": "group-82",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 501,
+  "section": "companies",
+  "en": "Storz suction-delivery coupling 25 mm",
+  "bg": "Смукателно-нагнетателен съединител Storz 25 мм",
+  "image": "group-129",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 503,
+  "section": "companies",
+  "en": "Storz suction-delivery coupling 38 mm",
+  "bg": "Смукателно-нагнетателен съединител Storz 38 мм",
+  "image": "group-105",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 505,
+  "section": "companies",
+  "en": "Storz female adaptor 25 mm / 1\"",
+  "bg": "Съединител Storz с вътрешна резба 25 мм / 1\"",
+  "image": "group-124",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 507,
+  "section": "companies",
+  "en": "Storz cap 25 mm",
+  "bg": "Капачка Storz 25 мм",
+  "image": "group-99",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 509,
+  "section": "companies",
+  "en": "Storz female adaptor 52 mm / 2\"",
+  "bg": "Съединител Storz с вътрешна резба 52 мм / 2\"",
+  "image": "group-111",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 511,
+  "section": "companies",
+  "en": "Storz male adaptor 52 mm / 2\"",
+  "bg": "Съединител Storz с външна резба 52 мм / 2\"",
+  "image": "group-109",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 513,
+  "section": "companies",
+  "en": "Storz female adaptor 52 mm / 1 1/2\"",
+  "bg": "Съединител Storz с вътрешна резба 52 мм / 1 1/2\"",
+  "image": "group-110",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 515,
+  "section": "companies",
+  "en": "Storz male adaptor 52 mm / 1 1/2\"",
+  "bg": "Съединител Storz с външна резба 52 мм / 1 1/2\"",
+  "image": "group-108",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 517,
+  "section": "companies",
+  "en": "Storz female adaptor 52 mm / 2 1/2\"",
+  "bg": "Съединител Storz с вътрешна резба 52 мм / 2 1/2\"",
+  "image": "group-106",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 519,
+  "section": "companies",
+  "en": "Storz male adaptor 52 mm / 2 1/2\"",
+  "bg": "Съединител Storz с външна резба 52 мм / 2 1/2\"",
+  "image": "group-108",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 520,
+  "section": "companies",
+  "en": "Storz female adaptor 75 mm / 2 1/2\"",
+  "bg": "Съединител Storz с вътрешна резба 75 мм / 2 1/2\"",
+  "image": "group-110",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 521,
+  "section": "companies",
+  "en": "Storz male adaptor 75 mm / 2 1/2\"",
+  "bg": "Съединител Storz с външна резба 75 мм / 2 1/2\"",
+  "image": "group-108",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 522,
+  "section": "companies",
+  "en": "Storz Reducer 52/25",
+  "bg": "Редукция Storz 52/25",
+  "image": "group-122",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 525,
+  "section": "companies",
+  "en": "Storz Reducer 75/25",
+  "bg": "Редукция Storz 75/25",
+  "image": "group-117",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 528,
+  "section": "companies",
+  "en": "Storz Reducer 52/25",
+  "bg": "Редукция Storz 52/25",
+  "image": "group-118",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 530,
+  "section": "companies",
+  "en": "Coupling for connecting fire hoses 25 mm, 52 mm, 75 mm, 110 mm",
+  "bg": "Съединител за свързване на пожарни маркучи 25 мм, 52 мм, 75 мм, 110 мм",
+  "image": "group-31",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 532,
+  "section": "companies",
+  "en": "Brass Valve 25 mm with Storz adaptor",
+  "bg": "Месингов кран 25 мм със съединител Storz",
+  "image": "group-22",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 534,
+  "section": "companies",
+  "en": "Plastic Hydrant nozzle 52 mm with coupling Storz",
+  "bg": "Пластмасов хидрантен струйник 52 мм със съединител Storz",
+  "image": "group-86",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 536,
+  "section": "companies",
+  "en": "Plastic Hydrant nozzle 25 mm with coupling Storz",
+  "bg": "Пластмасов хидрантен струйник 25 мм със съединител Storz",
+  "image": "group-75",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 538,
+  "section": "companies",
+  "en": "Plastic Hydrant nozzle 52 mm with coupling Storz",
+  "bg": "Пластмасов хидрантен струйник 52 мм със съединител Storz",
+  "image": "group-85",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 540,
+  "section": "companies",
+  "en": "25 mm nozzle with coupling Storz",
+  "bg": "Струйник 25 мм със съединител Storz",
+  "image": "group-13",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 542,
+  "section": "companies",
+  "en": "52 mm nozzle for compact and dispersed jet with coupling Storz",
+  "bg": "Струйник 52 мм за компактна и разпръсната струя със съединител Storz",
+  "image": "group-14",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 544,
+  "section": "companies",
+  "en": "75 mm nozzle for compact and dispersed jet with coupling Storz",
+  "bg": "Струйник 75 мм за компактна и разпръсната струя със съединител Storz",
+  "image": "group-15",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 546,
+  "section": "companies",
+  "en": "Underground fire Hydrant",
+  "bg": "Подземен пожарен хидрант",
+  "image": "group-144",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 548,
+  "section": "companies",
+  "en": "Elbow for underground fire Hydrant",
+  "bg": "Коляно за подземен пожарен хидрант",
+  "image": "group-40",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 550,
+  "section": "companies",
+  "en": "Pot for underground fire Hydrant",
+  "bg": "Охранителна кутия за подземен пожарен хидрант",
+  "image": "group-87",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 552,
+  "section": "companies",
+  "en": "Overhead fire Hydrant",
+  "bg": "Надземен пожарен хидрант",
+  "image": "group-76",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 554,
+  "section": "companies",
+  "en": "Combination switch for fire hydrants",
+  "bg": "Комбиниран ключ за пожарни хидранти",
+  "image": "group-28",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 556,
+  "section": "companies",
+  "en": "T-wrench for underground fire hydrants",
+  "bg": "Т-образен ключ за подземни пожарни хидранти",
+  "image": "group-134",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 558,
+  "section": "companies",
+  "en": "Standpipes for underground hydrants",
+  "bg": "Пожарни колонки за подземни хидранти",
+  "image": "group-100",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 560,
+  "section": "companies",
+  "en": "Combination wrench for Storz-type couplings",
+  "bg": "Комбиниран ключ за съединители тип Storz",
+  "image": "group-30",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 562,
+  "section": "companies",
+  "en": "Replacement rubber seals for hose couplings",
+  "bg": "Резервни гумени уплътнения за съединители на маркучи",
+  "image": "group-104",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 564,
+  "section": "companies",
+  "en": "ABC 40 fire extinguishing powder – 25 kg",
+  "bg": "Пожарогасителен прах ABC 40 – 25 кг",
+  "image": "group-16",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 566,
+  "section": "companies",
+  "en": "Emergency lights",
+  "bg": "Аварийни осветителни тела",
+  "image": "group-38",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 568,
+  "section": "companies",
+  "en": "Emergency signs",
+  "bg": "Аварийни знаци",
+  "image": "group-37",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 570,
+  "section": "companies",
+  "en": "Fire-protection paint for wooden and metal structures, 24 kg",
+  "bg": "Огнезащитна боя за дървени и метални конструкции, 24 кг",
+  "image": "group-69",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 572,
+  "section": "companies",
+  "en": "Heat-resistant paint up to 600 degrees C, 0.22 kg",
+  "bg": "Топлоустойчива боя до 600 °C, 0,22 кг",
+  "image": "group-74",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 574,
+  "section": "companies",
+  "en": "Non-combustible textiles for curtains, upholstery, and floor coverings - carpets and rugs",
+  "bg": "Негорими текстилни материали за завеси, тапицерия и подови настилки – мокети и килими",
+  "image": "group-80",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 576,
+  "section": "companies",
+  "en": "Non-combustible wooden floor and wall coverings",
+  "bg": "Негорими дървени подови и стенни облицовки",
+  "image": "group-79",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 578,
+  "section": "companies",
+  "en": "Fire fittings according to the Russian GOST standard",
+  "bg": "Пожарна арматура по руския стандарт ГОСТ",
+  "image": "group-49",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 580,
+  "section": "companies",
+  "en": "Fire Hydrant Cap 52 mm, 75 mm, 110 mm",
+  "bg": "Капачка за пожарен хидрант 52 мм, 75 мм, 110 мм",
+  "image": "group-64",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 582,
+  "section": "companies",
+  "en": "Sewer Cleaning Adapter - Base Mole 25 mm",
+  "bg": "Адаптер за почистване на канализация Base Mole 25 мм",
+  "image": "group-101",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 584,
+  "section": "companies",
+  "en": "Sewer Cleaning Adapter - Base Mole 52 mm",
+  "bg": "Адаптер за почистване на канализация Base Mole 52 мм",
+  "image": "group-102",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 586,
+  "section": "companies",
+  "en": "Battery 12V electric pump for the final extinguishing of localized fires. It works with one person. 16L, 4.5bar, 7.5Ah",
+  "bg": "Акумулаторна електрическа помпа 12 V за догасяване на локални пожари. Обслужва се от един човек. 16 л, 4,5 bar, 7,5 Ah",
+  "image": "group-20",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 588,
+  "section": "companies",
+  "en": "Hand pump for final extinguishing of localized fires. It works with two people, 10 L, hose 25 mm, 3m",
+  "bg": "Ръчна помпа за догасяване на локални пожари. Обслужва се от двама души, 10 л, маркуч 25 мм, 3 м",
+  "image": "group-73",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 590,
+  "section": "companies",
+  "en": "Dielectric carpet 20.000 V 700x700x3 mm",
+  "bg": "Диелектрично килимче 20 000 V, 700x700x3 мм",
+  "image": "group-32",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 592,
+  "section": "companies",
+  "en": "Dielectric gloves 20.000 V",
+  "bg": "Диелектрични ръкавици 20 000 V",
+  "image": "group-33",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 594,
+  "section": "companies",
+  "en": "Dielectric boots 20.000 V",
+  "bg": "Диелектрични ботуши 20 000 V",
+  "image": "group-136",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 596,
+  "section": "departments",
+  "en": "Vulcan CV-102 Fire Helmet EN 443",
+  "bg": "Пожарникарска каска Vulcan CV-102, EN 443",
+  "image": "group-143",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 598,
+  "section": "departments",
+  "en": "Dräger HPS 7000 H1 Fire Helmet EN 443",
+  "bg": "Пожарникарска каска Dräger HPS 7000 H1, EN 443",
+  "image": "group-42",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 600,
+  "section": "departments",
+  "en": "Aluminum Fire Helmet EN 443",
+  "bg": "Алуминиева пожарникарска каска, EN 443",
+  "image": "group-19",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 602,
+  "section": "departments",
+  "en": "Protective clothing for firefighters EN 469",
+  "bg": "Защитно облекло за пожарникари, EN 469",
+  "image": "group-94",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 604,
+  "section": "departments",
+  "en": "Lightweight firefighter clothing aramid for forest fires and outdoor work, EN 11612, EN 1149",
+  "bg": "Леко арамидно облекло за пожарникари за горски пожари и работа на открито, EN 11612, EN 1149",
+  "image": "group-81",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 606,
+  "section": "departments",
+  "en": "Firefighter shoes EN 15090",
+  "bg": "Пожарникарски обувки, EN 15090",
+  "image": "group-65",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 608,
+  "section": "departments",
+  "en": "Firefighter boots EN 345-2",
+  "bg": "Пожарникарски ботуши, EN 345-2",
+  "image": "group-57",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 610,
+  "section": "departments",
+  "en": "Fireman belt EN 358",
+  "bg": "Пожарникарски колан, EN 358",
+  "image": "group-67",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 612,
+  "section": "departments",
+  "en": "Firefighter hatchet with holster DIN 14924",
+  "bg": "Пожарникарска брадвичка с калъф, DIN 14924",
+  "image": "group-55",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 614,
+  "section": "departments",
+  "en": "Firefighter gloves EN 659",
+  "bg": "Пожарникарски ръкавици, EN 659",
+  "image": "group-56",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 616,
+  "section": "departments",
+  "en": "Aluminized heat-resistant clothes, EN 469-2",
+  "bg": "Алуминизирано топлоустойчиво облекло, EN 469-2",
+  "image": "group-17",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 618,
+  "section": "departments",
+  "en": "Aluminized Hood Gold Face Shield, EN 11612",
+  "bg": "Алуминизирана качулка със златист лицев щит, EN 11612",
+  "image": "group-18",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 620,
+  "section": "departments",
+  "en": "Chemical protection suit Dräger SPC 2400 PVC EN 1149-5, EN 14605-3",
+  "bg": "Костюм за химическа защита Dräger SPC 2400 PVC, EN 1149-5, EN 14605-3",
+  "image": "group-47",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 622,
+  "section": "departments",
+  "en": "Self-Contained Breathing Apparatus Dräger PSS3000 EN 137",
+  "bg": "Автономен дихателен апарат Dräger PSS3000, EN 137",
+  "image": "group-103",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 624,
+  "section": "departments",
+  "en": "Drager Face masks and spare parts for Self-contained breathing apparatus EN 137, EN 12021",
+  "bg": "Лицеви маски Drager и резервни части за автономни дихателни апарати, EN 137, EN 12021",
+  "image": "group-43",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 626,
+  "section": "departments",
+  "en": "Drager Safety filtering masks and goggles for smoke and chemicals - for wildfires and volunteers",
+  "bg": "Филтриращи маски и очила Drager Safety за дим и химикали – за горски пожари и доброволци",
+  "image": "group-41",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 628,
+  "section": "departments",
+  "en": "Emergency Folding Rescue Stretcher",
+  "bg": "Сгъваема спасителна носилка",
+  "image": "group-39",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 630,
+  "section": "departments",
+  "en": "Water pump hose 25 mm, 20 m with Storz couplings Working pressure 15 bar Bursting pressure 45 bar EN 14540",
+  "bg": "Напорен маркуч 25 мм, 20 м, със съединители Storz, работно налягане 15 bar, налягане на разкъсване 45 bar, EN 14540",
+  "image": "group-138",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 632,
+  "section": "departments",
+  "en": "Water pump hose 52 mm, 20 m with Storz couplings Working pressure 15 bar Bursting pressure 45 bar EN 14540",
+  "bg": "Напорен маркуч 52 мм, 20 м, със съединители Storz, работно налягане 15 bar, налягане на разкъсване 45 bar, EN 14540",
+  "image": "group-141",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 634,
+  "section": "departments",
+  "en": "Water pump hose 75 mm, 20 m with Storz couplings, Working pressure 15 bar Bursting pressure 45 bar EN 14540",
+  "bg": "Напорен маркуч 75 мм, 20 м, със съединители Storz, работно налягане 15 bar, налягане на разкъсване 45 bar, EN 14540",
+  "image": "group-140",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 636,
+  "section": "departments",
+  "en": "Water pump hose 110 mm, 20 m with Storz couplings, Working pressure 12 bar Bursting pressure 36 bar EN 14540",
+  "bg": "Напорен маркуч 110 мм, 20 м, със съединители Storz, работно налягане 12 bar, налягане на разкъсване 36 bar, EN 14540",
+  "image": "group-139",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 638,
+  "section": "departments",
+  "en": "Fire hoses vulcanizer",
+  "bg": "Вулканизатор за пожарни маркучи",
+  "image": "group-54",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 640,
+  "section": "departments",
+  "en": "Storz delivery coupling 52 mm",
+  "bg": "Нагнетателен съединител Storz 52 мм",
+  "image": "group-130",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 642,
+  "section": "departments",
+  "en": "Storz suction coupling 52 mm",
+  "bg": "Смукателен съединител Storz 52 мм",
+  "image": "group-128",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 644,
+  "section": "departments",
+  "en": "Storz delivery coupling 75 mm",
+  "bg": "Нагнетателен съединител Storz 75 мм",
+  "image": "group-126",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 646,
+  "section": "departments",
+  "en": "Storz suction coupling 75 mm",
+  "bg": "Смукателен съединител Storz 75 мм",
+  "image": "group-125",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 648,
+  "section": "departments",
+  "en": "Storz delivery coupling 110 mm",
+  "bg": "Нагнетателен съединител Storz 110 мм",
+  "image": "group-95",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 650,
+  "section": "departments",
+  "en": "Storz suction coupling 110 mm",
+  "bg": "Смукателен съединител Storz 110 мм",
+  "image": "group-127",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 652,
+  "section": "departments",
+  "en": "Storz female adaptor 75 mm / 2\"",
+  "bg": "Съединител Storz с вътрешна резба 75 мм / 2\"",
+  "image": "group-112",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 654,
+  "section": "departments",
+  "en": "Storz male adaptor 75 mm / 2\"",
+  "bg": "Съединител Storz с външна резба 75 мм / 2\"",
+  "image": "group-108-1",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 656,
+  "section": "departments",
+  "en": "Storz female adaptor 75 mm / 3\"",
+  "bg": "Съединител Storz с вътрешна резба 75 мм / 3\"",
+  "image": "group-113",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 658,
+  "section": "departments",
+  "en": "Storz male adaptor 75 mm / 3\"",
+  "bg": "Съединител Storz с външна резба 75 мм / 3\"",
+  "image": "group-120",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 660,
+  "section": "departments",
+  "en": "Storz female adaptor 110 mm / 4\"",
+  "bg": "Съединител Storz с вътрешна резба 110 мм / 4\"",
+  "image": "group-114",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 662,
+  "section": "departments",
+  "en": "Storz male adaptor 110 mm / 4\"",
+  "bg": "Съединител Storz с външна резба 110 мм / 4\"",
+  "image": "group-119",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 664,
+  "section": "departments",
+  "en": "Storz cap 52 mm",
+  "bg": "Капачка Storz 52 мм",
+  "image": "group-98",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 666,
+  "section": "departments",
+  "en": "Storz cap 75 mm",
+  "bg": "Капачка Storz 75 мм",
+  "image": "group-97",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 668,
+  "section": "departments",
+  "en": "Storz cap 110 mm",
+  "bg": "Капачка Storz 110 мм",
+  "image": "group-96",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 670,
+  "section": "departments",
+  "en": "Storz Reducer 75/52",
+  "bg": "Редукция Storz 75/52",
+  "image": "group-116",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 672,
+  "section": "departments",
+  "en": "Storz Reducer 110/75",
+  "bg": "Редукция Storz 110/75",
+  "image": "group-115",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 674,
+  "section": "departments",
+  "en": "Turbo Nozzle, working pressure 3-12 bar 200 L/min",
+  "bg": "Турбо струйник, работно налягане 3–12 bar, 200 л/мин",
+  "image": "group-133",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 676,
+  "section": "departments",
+  "en": "Turbo Nozzle, working pressure 3-12 bar 115, 230, 360, 475 L/min",
+  "bg": "Турбо струйник, работно налягане 3–12 bar, 115, 230, 360, 475 л/мин",
+  "image": "group-132",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 678,
+  "section": "departments",
+  "en": "Water shield 5 – 8 bar 52 mm, 900–1200 L/min 75 mm, 1400–1800 L/min",
+  "bg": "Водна завеса 5–8 bar: 52 мм – 900–1200 л/мин, 75 мм – 1400–1800 л/мин",
+  "image": "group-137",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 680,
+  "section": "departments",
+  "en": "Fire rubber suction hose 75 mm/B, 1,6 m DIN EN 14 557",
+  "bg": "Пожарен гумен смукателен маркуч 75 мм/B, 1,6 м, DIN EN 14 557",
+  "image": "group-59",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 682,
+  "section": "departments",
+  "en": "Fire rubber suction hose 110 mm/A, 1,6 m DIN EN 14 557",
+  "bg": "Пожарен гумен смукателен маркуч 110 мм/A, 1,6 м, DIN EN 14 557",
+  "image": "group-59",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 683,
+  "section": "departments",
+  "en": "Fire rubber suction hose 110 mm/A, 4 m DIN EN 14 557",
+  "bg": "Пожарен гумен смукателен маркуч 110 мм/A, 4 м, DIN EN 14 557",
+  "image": "group-59",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 684,
+  "section": "departments",
+  "en": "Fire rubber suction hose 125 mm/5\", 3 m DIN EN 14 557",
+  "bg": "Пожарен гумен смукателен маркуч 125 мм/5\", 3 м, DIN EN 14 557",
+  "image": "group-59",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 685,
+  "section": "departments",
+  "en": "Suction strainer 75 mm/A, 110 mm/A, 125 mm/5\" DIN 14362",
+  "bg": "Смукателна цедка 75 мм/A, 110 мм/A, 125 мм/5\", DIN 14362",
+  "image": "group-131",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 687,
+  "section": "departments",
+  "en": "Oblique Outlet Suction Strainer for flooding and shallow water – 110 mm",
+  "bg": "Смукателна цедка с наклонен изход за наводнения и плитка вода – 110 мм",
+  "image": "group-77",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 689,
+  "section": "departments",
+  "en": "Foaming agent Stamex F -15, 3% - 200 L DIN EN 14227 DIN EN 1568",
+  "bg": "Пенообразувател Stamex F -15, 3% – 200 л, DIN EN 14227, DIN EN 1568",
+  "image": "group-72",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 691,
+  "section": "departments",
+  "en": "Foam Proportioner with Storz 52 mm & 75 mm 200, 400, 800 L/min",
+  "bg": "Пеносмесител със съединители Storz 52 мм и 75 мм, 200, 400, 800 л/мин",
+  "image": "group-71",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 693,
+  "section": "departments",
+  "en": "Heavy Expansion Foam Nozzle, Storz 52 mm",
+  "bg": "Струйник за тежка пяна, Storz 52 мм",
+  "image": "group-84",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 695,
+  "section": "departments",
+  "en": "Nozzle for Medium Expansion Foam, Storz 52 mm",
+  "bg": "Струйник за пяна със средна кратност, Storz 52 мм",
+  "image": "group-78",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 697,
+  "section": "departments",
+  "en": "Fireman ax large DIN EN 14900-FA",
+  "bg": "Голяма пожарникарска брадва, DIN EN 14900-FA",
+  "image": "group-66",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 699,
+  "section": "departments",
+  "en": "Fire Telescopic ladder 1.12 – 3.5 m, 15 kg DIN EN 1147",
+  "bg": "Телескопична пожарна стълба 1,12–3,5 м, 15 кг, DIN EN 1147",
+  "image": "group-58",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 701,
+  "section": "departments",
+  "en": "Fire Hook ladder 4.4 m, 11 kg EN 1147",
+  "bg": "Пожарна щурмова стълба 4,4 м, 11 кг, EN 1147",
+  "image": "group-53",
+  "w": 300,
+  "h": 300
+ },
+ {
+  "id": 703,
+  "section": "departments",
+  "en": "Fire Hook ladder wood 4.4 m, 17 kg EN 1147",
+  "bg": "Дървена пожарна щурмова стълба 4,4 м, 17 кг, EN 1147",
+  "image": "group-52"
+ },
+ {
+  "id": 705,
+  "section": "departments",
+  "en": "Fire Hook ladder type A 4.2 m, 14.2 kg ÖNORM F4047, EN 1147",
+  "bg": "Пожарна щурмова стълба тип A 4,2 м, 14,2 кг, ÖNORM F4047, EN 1147",
+  "image": "group-51"
+ },
+ {
+  "id": 707,
+  "section": "departments",
+  "en": "Fire Folding ladder wood 3 m, 9.5 kg EN 1147",
+  "bg": "Дървена сгъваема пожарна стълба 3 м, 9,5 кг, EN 1147",
+  "image": "group-50"
+ },
+ {
+  "id": 709,
+  "section": "departments",
+  "en": "Fire 2-section rope-extension ladder 5.6 m – 9.7 m, 41 kg EN 1147",
+  "bg": "Двуколенна разтегателна пожарна стълба с въже 5,6–9,7 м, 41 кг, EN 1147",
+  "image": "group-36"
+ },
+ {
+  "id": 711,
+  "section": "departments",
+  "en": "Fire Rope ladder 3-part with supports 5.6 m - 14 m, 95 kg ÖNORM F 4047",
+  "bg": "Триколенна пожарна стълба с въже и подпори 5,6–14 м, 95 кг, ÖNORM F 4047",
+  "image": "group-63"
+ },
+ {
+  "id": 713,
+  "section": "departments",
+  "en": "Collector PN 2X75/110",
+  "bg": "Колектор PN 2X75/110",
+  "image": "group-27"
+ },
+ {
+  "id": 715,
+  "section": "departments",
+  "en": "DIVIDERS RK 75/52-52",
+  "bg": "Разклонител RK 75/52-52",
+  "image": "group-44"
+ },
+ {
+  "id": 717,
+  "section": "departments",
+  "en": "DIVIDERS RK 75/52-75-52",
+  "bg": "Разклонител RK 75/52-75-52",
+  "image": "group-34"
+ },
+ {
+  "id": 719,
+  "section": "departments",
+  "en": "Battery 12V electric pump on a trolley for the final extinguishing of localized fires. It works with one person. 16L, 4.5bar, 10Ah",
+  "bg": "Акумулаторна електрическа помпа 12 V на количка за догасяване на локални пожари. Обслужва се от един човек. 16 л, 4,5 bar, 10 Ah",
+  "image": "group-21"
+ },
+ {
+  "id": 721,
+  "section": "departments",
+  "en": "Fireman searchlights",
+  "bg": "Пожарникарски прожектори",
+  "image": "group-68"
+ },
+ {
+  "id": 723,
+  "section": "departments",
+  "en": "Spare parts for fire fighting vehicle chassis",
+  "bg": "Резервни части за шасита на пожарни автомобили",
+  "image": "group-145"
+ },
+ {
+  "id": 725,
+  "section": "departments",
+  "en": "Spare parts for fire superstructure of fire fighting vehicle",
+  "bg": "Резервни части за пожарни надстройки на пожарни автомобили",
+  "image": "group-135"
+ }
+]
