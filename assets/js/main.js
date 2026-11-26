@@ -159,8 +159,10 @@
   var KEY = 'bulfire-lang';
   var pageLang = current.getAttribute('hreflang');
   var versions = {};
+  // a page without a twin (data-no-twin: its button leads to the other language's home page) is not
+  // left when the browser translates it
   Array.prototype.forEach.call(box.querySelectorAll('a[hreflang]'), function (a) {
-    versions[a.getAttribute('hreflang')] = a;
+    if (!a.hasAttribute('data-no-twin')) versions[a.getAttribute('hreflang')] = a;
   });
 
   function chosen() {

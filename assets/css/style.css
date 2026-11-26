@@ -816,6 +816,297 @@ a.tile:hover .tile-go svg { transform: translateX(3px); }
 }
 .page-head .btn { margin-top: 28px; }
 
+/* ---------- Document pages (About us, the vehicle pages, Contact, the legal pages) ----------
+   One reading column: ruled sections with a red node, figures as white cards with their caption
+   (the old site's heading under each photo), spec tables that scroll sideways on phones, lists
+   with red diamonds, notes on a pale red card, a large "Get a quote" link at the end. */
+
+.doc { max-width: 980px; }
+.doc > :where(* + *) { margin-top: 1.15em; }
+.doc :where(p, ul, ol) { max-width: 70ch; }
+.doc :where(p) { margin-bottom: 0; }
+.doc :where(a) { color: var(--fire-deep); text-decoration-color: var(--fire); text-underline-offset: 4px; overflow-wrap: anywhere; }
+.doc :where(a:hover) { color: var(--ink); }
+.doc-section {
+  position: relative;
+  margin-top: clamp(48px, 6vw, 80px);
+  padding-top: clamp(28px, 3.5vw, 40px);
+  border-top: 1px solid var(--line);
+}
+.doc-section::before {              /* the red node on the rule */
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--fire);
+}
+.doc > .doc-section:first-child { margin-top: 0; }
+.doc-section > :where(* + *) { margin-top: 1.15em; }
+.page-body .doc h2 {
+  margin: 0;
+  font-size: clamp(24px, 2.6vw, 32px);
+}
+.page-body .doc h3 {
+  margin: 2em 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.8vw, 22px);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.page-body .doc h2 + h3 { margin-top: 1em; }
+.doc ul {
+  margin-block: 1em 0;
+  padding: 0;
+  list-style: none;
+}
+.doc ul > li { position: relative; padding-left: 26px; }
+.doc ul > li + li { margin-top: 10px; }
+.doc ul > li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: .72em;
+  width: 7px;
+  height: 7px;
+  background: var(--fire);
+  transform: rotate(45deg);
+}
+.doc ol { margin-block: 1em 0; padding-left: 1.6em; }
+.doc ol > li { padding-left: .3em; }
+.doc ol > li + li { margin-top: 12px; }
+.doc ol > li::marker { font-family: var(--font-display); font-weight: 600; color: var(--fire-deep); }
+.doc .lead-in { font-size: clamp(17px, 1.6vw, 19px); color: var(--ink); }
+
+/* a photo with its caption; side by side in .figures (2, or 3 from 900px with .figures--3) */
+.figure {
+  --radius: 18px;
+  margin-inline: 0;
+  padding: 12px 12px 14px;
+}
+.doc > .figure,
+.doc-section > .figure { max-width: 860px; }
+.figure img { width: 100%; height: auto; border-radius: 8px; }
+.figure figcaption {
+  margin: 12px 4px 0;
+  font-family: var(--font-display);
+  font-size: 16.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.figures {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(14px, 2vw, 22px);
+  align-items: start;
+}
+@media (min-width: 640px) {
+  .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 900px) {
+  .figures--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .figures--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.figures > .figure { margin: 0; }
+.figure--portrait { max-width: 420px; }
+
+/* technical tables: the client's tables, as tables; on phones they scroll sideways in their card */
+.table-wrap {
+  --radius: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.table-wrap:focus-visible { outline-offset: 2px; }
+.spec {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.spec caption {               /* for screen readers: the client's heading or sentence above the table names it */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.spec th,
+.spec td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.spec thead th {
+  border-bottom: 2px solid var(--fire);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  background: #fbfbfc;
+}
+.spec tbody th { font-weight: 600; color: var(--ink); background: #fbfbfc; }
+.spec tbody tr:last-child > * { border-bottom: 0; }
+.spec .num { text-align: right; white-space: nowrap; }
+
+/* the chassis data of the off-road page: one card per chassis, side by side */
+.specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(14px, 2vw, 22px);
+  max-width: 980px;
+}
+.spec-card { --radius: 16px; padding: 18px 20px 20px; }
+.page-body .spec-card h4 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.spec-card dl { margin: 0; font-size: 15px; line-height: 1.45; }
+.spec-card dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4px 14px;
+  padding: 7px 0;
+  border-top: 1px solid var(--line);
+}
+.spec-card dt { color: var(--muted); }
+.spec-card dd { margin: 0; color: var(--ink); font-variant-numeric: tabular-nums; }
+.doc ul ul { margin-top: 10px; }
+
+/* a note the client set apart (NOTE!, IMPORTANT!) */
+.callout {
+  --radius: 14px;
+  padding: 18px 22px;
+  border: 1px solid #f6c9c6;
+  border-left: 3px solid var(--fire);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--fire-soft);
+  color: var(--ink);
+}
+.callout > :where(* + *) { margin-top: .7em; }
+.callout-title { font-family: var(--font-display); font-weight: 600; letter-spacing: .02em; }
+
+/* a bold closing sentence of a section, as the client set it */
+.doc .emph { font-weight: 600; color: var(--ink); }
+
+/* the large link at the end of a page */
+.cta {
+  --radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 980px;
+  margin-top: clamp(56px, 7vw, 96px);
+  padding: clamp(24px, 3.5vw, 40px) clamp(22px, 3.5vw, 44px);
+  border: 1px solid #f3c4c1;
+  border-radius: var(--radius);
+  background: var(--fire-soft);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color .2s ease-out, border-color .2s ease-out;
+}
+.cta-text {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.8vw, 36px);
+  font-weight: 500;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.cta-go {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--fire);
+  transition: background-color .2s ease-out;
+}
+.cta-go svg { width: 24px; height: 24px; transition: transform .2s ease-out; }
+.cta:hover, .cta:focus-visible { border-color: #eaa29d; background: #fbdedb; }
+.cta:hover .cta-go, .cta:focus-visible .cta-go { background: var(--ink); }
+.cta:hover .cta-go svg, .cta:focus-visible .cta-go svg { transform: translateX(4px); }
+
+/* About us: the CEO's photo beside his biography */
+.bio {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(18px, 3vw, 36px);
+  align-items: start;
+}
+@media (min-width: 760px) {
+  .bio { grid-template-columns: 260px minmax(0, 1fr); }
+}
+.bio .figure { margin: 0; max-width: 300px; }
+.bio-text > :where(* + *) { margin-top: 1em; }
+
+/* Contact: the company's details and the form */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+@media (min-width: 1100px) {
+  .contact-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+}
+.contact-card {
+  --radius: 24px;
+  padding: clamp(22px, 3vw, 36px);
+  font-style: normal;
+}
+.contact-card h2 { margin: 0; }
+.contact-card p { margin: 0; }
+.contact-card > * + * { margin-top: 16px; }   /* after the margin reset above, so the blocks keep their space */
+.contact-card .footer-label { margin-bottom: 2px; }
+.contact-card a { color: var(--text); text-decoration-color: rgba(28, 35, 41, .3); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.contact-card a:hover { color: var(--fire-deep); text-decoration-color: currentColor; }
+.contact-card ul { list-style: none; margin: 0; padding: 0; }
+.contact-card li + li { margin-top: 3px; }
+.contact-grid .form-plate { max-width: none; }
+.contact-side { display: grid; gap: clamp(16px, 2vw, 24px); }
+.contact-side .figure { margin: 0; }
+.figure figcaption.figcaption-text {
+  font-family: var(--font-text);
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text);
+  text-wrap: pretty;
+}
+.field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 40px 11px 14px;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  border: 1px solid var(--field-edge);
+  border-radius: 10px;
+  appearance: none;
+  background: var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%235c656d' stroke-width='1.6'/%3E%3C/svg%3E") calc(100% - 16px) 50% / 12px 12px no-repeat;
+}
+.field select:focus { outline: none; border-color: var(--fire-deep); box-shadow: 0 0 0 3px rgba(211, 20, 27, .2); }
+
 /* ---------- The online fire shops ----------
    The client's two shops, each a grid of product cards (picture, name, "Get a quote"). No prices
    anywhere (client, 2026-11-26). The button adds the product to the visitor's quote request
