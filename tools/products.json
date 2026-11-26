@@ -1102,83 +1102,107 @@
   "section": "departments",
   "en": "Fire Hook ladder wood 4.4 m, 17 kg EN 1147",
   "bg": "Дървена пожарна щурмова стълба 4,4 м, 17 кг, EN 1147",
-  "image": "group-52"
+  "image": "group-52",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 705,
   "section": "departments",
   "en": "Fire Hook ladder type A 4.2 m, 14.2 kg ÖNORM F4047, EN 1147",
   "bg": "Пожарна щурмова стълба тип A 4,2 м, 14,2 кг, ÖNORM F4047, EN 1147",
-  "image": "group-51"
+  "image": "group-51",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 707,
   "section": "departments",
   "en": "Fire Folding ladder wood 3 m, 9.5 kg EN 1147",
   "bg": "Дървена сгъваема пожарна стълба 3 м, 9,5 кг, EN 1147",
-  "image": "group-50"
+  "image": "group-50",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 709,
   "section": "departments",
   "en": "Fire 2-section rope-extension ladder 5.6 m – 9.7 m, 41 kg EN 1147",
   "bg": "Двуколенна разтегателна пожарна стълба с въже 5,6–9,7 м, 41 кг, EN 1147",
-  "image": "group-36"
+  "image": "group-36",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 711,
   "section": "departments",
   "en": "Fire Rope ladder 3-part with supports 5.6 m - 14 m, 95 kg ÖNORM F 4047",
   "bg": "Триколенна пожарна стълба с въже и подпори 5,6–14 м, 95 кг, ÖNORM F 4047",
-  "image": "group-63"
+  "image": "group-63",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 713,
   "section": "departments",
   "en": "Collector PN 2X75/110",
   "bg": "Колектор PN 2X75/110",
-  "image": "group-27"
+  "image": "group-27",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 715,
   "section": "departments",
   "en": "DIVIDERS RK 75/52-52",
   "bg": "Разклонител RK 75/52-52",
-  "image": "group-44"
+  "image": "group-44",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 717,
   "section": "departments",
   "en": "DIVIDERS RK 75/52-75-52",
   "bg": "Разклонител RK 75/52-75-52",
-  "image": "group-34"
+  "image": "group-34",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 719,
   "section": "departments",
   "en": "Battery 12V electric pump on a trolley for the final extinguishing of localized fires. It works with one person. 16L, 4.5bar, 10Ah",
   "bg": "Акумулаторна електрическа помпа 12 V на количка за догасяване на локални пожари. Обслужва се от един човек. 16 л, 4,5 bar, 10 Ah",
-  "image": "group-21"
+  "image": "group-21",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 721,
   "section": "departments",
   "en": "Fireman searchlights",
   "bg": "Пожарникарски прожектори",
-  "image": "group-68"
+  "image": "group-68",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 723,
   "section": "departments",
   "en": "Spare parts for fire fighting vehicle chassis",
   "bg": "Резервни части за шасита на пожарни автомобили",
-  "image": "group-145"
+  "image": "group-145",
+  "w": 300,
+  "h": 300
  },
  {
   "id": 725,
   "section": "departments",
   "en": "Spare parts for fire superstructure of fire fighting vehicle",
   "bg": "Резервни части за пожарни надстройки на пожарни автомобили",
-  "image": "group-135"
+  "image": "group-135",
+  "w": 300,
+  "h": 300
  }
 ]
