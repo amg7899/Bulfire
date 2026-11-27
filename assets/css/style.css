@@ -46,7 +46,8 @@ html {
   -webkit-text-size-adjust: 100%;
   scroll-padding-top: calc(var(--header-h) + 16px);
 }
-html.nav-lock { overflow: hidden; }
+html.nav-lock,
+html.lightbox-open { overflow: hidden; }
 
 body {
   margin: 0;
@@ -915,6 +916,114 @@ a.tile:hover .tile-go svg { transform: translateX(3px); }
 }
 .figures > .figure { margin: 0; }
 .figure--portrait { max-width: 420px; }
+
+/* About us: the old site's gallery as a grid of photos, each whole on its white card; a photo (and
+   every document) opens full size in the viewer (viewer.js) */
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(10px, 1.6vw, 18px);
+}
+@media (min-width: 640px) {
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+.doc .gallery { max-width: none; }                  /* not the reading width of the text lists */
+.doc .gallery > li { display: flex; min-width: 0; margin: 0; padding: 0; }
+.doc .gallery > li::before { content: none; }        /* no list diamond */
+.gallery .figure { --radius: 14px; flex: 1; margin: 0; padding: 8px; }
+.gallery .figure img { aspect-ratio: 4 / 3; object-fit: contain; background: #fff; }
+.zoom {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: zoom-in;
+}
+.zoom img { transition: transform .4s cubic-bezier(.2, .7, .2, 1); }
+.zoom:hover img { transform: scale(1.03); }
+.zoom:focus-visible { outline-offset: 2px; }
+
+/* the viewer: the page dims to ink, the picture on its own, caption and previous / next below */
+.lightbox {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(28, 35, 41, .95);
+  color: #fff;
+  overscroll-behavior: contain;
+}
+.lightbox[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  animation: lightbox-in .2s ease-out;
+}
+@keyframes lightbox-in { from { opacity: 0; } }
+.lightbox::backdrop { background: transparent; }
+.lightbox :focus-visible { outline-color: #fff; }
+.lightbox-top,
+.lightbox-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px var(--gutter);
+}
+.lightbox-count { margin: 0; font-size: 14px; font-variant-numeric: tabular-nums; color: rgba(255, 255, 255, .78); }
+.lightbox-stage {
+  display: grid;
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);   /* a fixed box, so the picture can fit it */
+  place-items: center;
+  min-height: 0;
+  padding: 0 var(--gutter);
+}
+.lightbox-stage picture { display: contents; }
+.lightbox-img {
+  grid-area: 1 / 1;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .6);
+}
+.lightbox-caption {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+.lightbox-btn {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color .2s ease-out;
+}
+.lightbox-btn:hover { background: var(--fire-soft); }
+.lightbox-btn svg { width: 22px; height: 22px; }
+.lightbox-btn[hidden] { display: none; }
 
 /* technical tables: the client's tables, as tables; on phones they scroll sideways in their card */
 .table-wrap {

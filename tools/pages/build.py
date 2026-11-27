@@ -25,6 +25,11 @@ SIZES = {
     'pair': '(min-width: 1100px) 480px, (min-width: 640px) 46vw, 100vw',
     'three': '(min-width: 1100px) 320px, (min-width: 900px) 31vw, (min-width: 640px) 46vw, 100vw',
     'portrait': '300px',
+    'gallery': '(min-width: 1100px) 240px, (min-width: 1000px) 23vw, (min-width: 640px) 31vw, 46vw',
+}
+VIEWER = {   # the viewer's button labels (viewer.js), on <main>
+    'en': 'data-close="Close" data-prev="Previous" data-next="Next"',
+    'bg': 'data-close="Затвори" data-prev="Предишна" data-next="Следваща"',
 }
 
 
@@ -42,7 +47,7 @@ def deeper(fragment, levels=1):
     return fragment
 
 
-def picture(img_id, alt, kind, prefix, manifest):
+def picture(img_id, alt, kind, prefix, manifest, zoom=False):
     m = manifest.get(str(img_id))
     if not m:
         return f'<img src="{prefix}assets/img/pages/missing.svg" alt="{alt}" width="800" height="500" loading="lazy">'
@@ -53,8 +58,12 @@ def picture(img_id, alt, kind, prefix, manifest):
     webp = ', '.join(f'{base}-{x}.webp {x}w' for x in widths)
     jpg = ', '.join(f'{base}-{x}.jpg {x}w' for x in widths)
     sizes = SIZES[kind]
-    return (f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}">'
-            f'<img src="{base}-{small}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></picture>')
+    pic = (f'<picture><source type="image/webp" srcset="{webp}" sizes="{sizes}">'
+           f'<img src="{base}-{small}.jpg" srcset="{jpg}" sizes="{sizes}" alt="{alt}" width="{w}" height="{h}" loading="lazy" decoding="async"></picture>')
+    if zoom:   # the picture opens full size (viewer.js); without JavaScript the link opens the image
+        big = widths[-1]
+        pic = f'<a class="zoom" href="{base}-{big}.jpg" data-webp="{base}-{big}.webp">{pic}</a>'
+    return pic
 
 
 def build(path, manifest):
@@ -74,11 +83,12 @@ def build(path, manifest):
         img_id = re.search(r'data-img="(\d+)"', attrs).group(1)
         alt = (re.search(r'data-alt="([^"]*)"', attrs) or [None, ''])[1]
         kind = (re.search(r'data-size="([^"]*)"', attrs) or [None, 'single'])[1]
-        attrs = re.sub(r'\s*data-(img|alt|size)="[^"]*"', '', attrs)
+        zoom = 'data-zoom' in attrs
+        attrs = re.sub(r'\s*data-(img|alt|size)="[^"]*"', '', attrs).replace(' data-zoom', '')
         m = manifest.get(str(img_id))
         if kind == 'single' and m and m['w'] < 860:     # never wider than the picture itself (+ the card's padding)
             attrs += f' style="max-width: {m["w"] + 26}px"'
-        return f'<figure{attrs}>{picture(img_id, alt, kind, prefix, manifest)}{inner}</figure>'
+        return f'<figure{attrs}>{picture(img_id, alt, kind, prefix, manifest, zoom)}{inner}</figure>'
     body = re.sub(r'<figure([^>]*data-img="\d+"[^>]*)>(.*?)</figure>', fig, body, flags=re.S)
     # tables: in a card that scrolls sideways, announced as such
     n = [0]
@@ -95,7 +105,8 @@ def build(path, manifest):
     if meta.get('cta') and quote:
         cta = (f'\n        <a class="cta" href="{prefix}{"bg/" if lang == "bg" else ""}{quote}">'
                f'<span class="cta-text">{T["cta"]}</span><span class="cta-go" aria-hidden="true">{ARROW}</span></a>')
-    main = f'''  <main id="main">
+    viewer = f' {VIEWER[lang]}' if 'class="zoom"' in body else ''
+    main = f'''  <main id="main"{viewer}>
     <section class="page-head">
       <div class="container">
         <h1>{meta["h1"]}</h1>{lead}{head_btn}
